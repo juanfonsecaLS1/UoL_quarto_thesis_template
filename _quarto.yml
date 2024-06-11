@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: .
+  output-dir: output_pdf
 
 book:
   title: Put your PhD title here
@@ -24,10 +24,10 @@ book:
     - Appendices/AppendixA.qmd
     - Appendices/AppendixB.qmd
 
-  site-url: https://nmfs-opensci.github.io/quarto-thesis/
-  repo-url: https://github.com/nmfs-opensci/quarto-thesis
-  repo-actions: [edit, source, issue]
-  search: true
+  # site-url: https://nmfs-opensci.github.io/quarto-thesis/
+  # repo-url: https://github.com/nmfs-opensci/quarto-thesis
+  # repo-actions: [edit, source, issue]
+  # search: true
 
 thesis:
   degree-name: Doctor of Philosophy
@@ -57,6 +57,7 @@ format:
     toclinkcolor: black
     toc-depth: 3
     classoption: [onehalfspacing, oneside]
+    # The following 3 lines can be commented if a consolidated reference list is required
     citeproc: false # these needs adding so that end reference list disappears
     filters:
        - section-bibliographies # create references for each chapter
@@ -64,3 +65,12 @@ format:
     include-in-header: 
           text: |
             \usepackage[final]{pdfpages}
+            
+geometry:
+  - top=30mm
+  - left=25mm
+  - right=25mm
+  - bottom=25mm
+
+fontsize: 12pt
+linestretch: 1.5
