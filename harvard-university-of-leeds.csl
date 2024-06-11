@@ -97,7 +97,7 @@
           </date>
         </if>
         <else>
-          <text term="no date" form="short"/>
+          <text term="no date" form="short" prefix=" "/>
         </else>
       </choose>
     </group>
@@ -245,6 +245,9 @@
             <group prefix=", ">
               <text macro="page"/>
             </group>
+			<group prefix=". ">
+				<text variable="DOI" prefix="https://doi.org/"/>
+			</group>
           </group>
         </else>
       </choose>
